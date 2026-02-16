@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Sentinel Drive Sense",
+    "slug": "sentinel-drive-sense",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#0A0E1A"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.sentineldrive.sense",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Sentinel Drive Sense utilise votre position pour calculer la vitesse et la distance pendant vos trajets.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Sentinel Drive Sense utilise votre position en arrière-plan pour suivre votre trajet.",
+        "UIBackgroundModes": ["location"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0E1A"
+      },
+      "package": "com.sentineldrive.sense",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Sentinel Drive Sense utilise votre position pour suivre votre trajet."
+        }
+      ]
+    ]
+  }
+}
